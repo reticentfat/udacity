@@ -17,15 +17,15 @@ def numbers_in_lists(string):
     biggest = 0
     temp = []
     result = []
-    while i < len(s):
-        if int(s[i]) > biggest:
-            biggest = int(s[i])
+    while i < len(string):
+        if int(string[i]) > biggest:
+            biggest = int(string[i])
             if temp != []:
                 result.append(temp)
                 temp = []
             result.append(biggest)
         else:
-            temp.append(int(s[i]))
+            temp.append(int(string[i]))
         i = i + 1
     if temp != []:
         result.append(temp)
