@@ -18,22 +18,11 @@ def freq_analysis(message):
     ##
     # Your code here
     ##
-    freq_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
-             'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    count = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-             0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    y = -1
-    for e in message:
-        x = -1
-        while e != freq_list[x]:
-            x = x + 1
-        if e == freq_list[x]:
-            count[x] = (count[x] + 1)
-    # issues lies within this piece of code
-    while y < (len(count)):
-        y = y + 1
-        count[y] = count[y] / len(message)
-    return count
+     abc = 'abcdefghijklmnopqrstuvwxyz'
+    freq_list = [0.0] *26
+    for i in message:
+        freq_list[abc.find(i)] +=  1.0 / len (message)
+    return freq_list
 
 
 
