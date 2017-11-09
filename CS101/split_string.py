@@ -16,7 +16,7 @@
 
 def split_string(source, splitlist):
     wordist=['']
-    at_split = True
+    at_split = False
     for char in source:
         if char in splitlist:
             ##print ("this char:" + str(char) + "is in splitlist")
